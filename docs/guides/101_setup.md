@@ -30,7 +30,7 @@ provider "tos" {
 terraform {
   required_providers {
     tos = {
-      source  = "scs-Tufin/tos"
+      source  = "SCS-Tufin/tos"
       version = "~> 1.0.0"
     }
   }
