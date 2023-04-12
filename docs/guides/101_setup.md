@@ -12,7 +12,7 @@ To install this provider, copy and paste this code into your Terraform configura
 terraform {
   required_providers {
     tos = {
-      source  = "chrisrough/tos"
+      source  = "SCS-Tufin/tos"
       version = "~> 1.0.0"
     }
   }
