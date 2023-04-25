@@ -6,7 +6,7 @@ The `tos_service_port` Data Source lists a single Global service with a port def
 
 ```terraform
 data "tos_service_port" "services_by_port" {
-  min_port = "8080"
+  port = "8080"
 }
 ```
 
