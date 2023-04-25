@@ -23,7 +23,7 @@ Visit [Tufin](https://tufin.com) for more information on TOS.
 
 [tos_service_groups](data-sources/service_groups.md)
 
-[tos_service_groups](data-sources/service_by_port.md)
+[tos_service_port](data-sources/service_by_port.md)
 
 [tos_tickets](data-sources/tickets.md)
 
