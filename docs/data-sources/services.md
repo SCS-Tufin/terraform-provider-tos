@@ -7,12 +7,22 @@ The `tos_services` Data Source lists Global Services from Tufin SA.
 ```terraform
 data "tos_services" "services_by_name" {
   name = "https"
+  min_port = 443
+  max_port = 443
+  service_type = "tcp"
+  app_id = -1
 }
 ```
 
 ## Argument Reference
 
-* `name` - Name (Wildcard) of the Global Services to be listed.
+* `name` - Name (Wildcard) of the Global/Local Services to be listed.
+* `min_port` - Min Port of the Global/Local Services to be listed
+* `max_port` - Max Port of the Global/Local Services to be listed
+* `service_type` - Service type of the Global/Local Services to be listed. Eg. tcp, udp, icmp, ip
+* `app_id` - Specify application id to search in Local services
+
+Note: All arguments are optional. 
 
 ## Attribute Reference
 
