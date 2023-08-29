@@ -6,9 +6,9 @@ The `tos_application` Resource manages Applications in Tufin SC.
 
 ```terraform
 resource "tos_application" "application_1" {
-  domain  = var.domain
-  name    = "APP_1"
-  comment = "APP 1 .."
+  customer = var.customer
+  name     = "APP_1"
+  comment  = "APP 1 .."
 
   owner   = "OwnerName"
   editors = [
@@ -30,7 +30,7 @@ resource "tos_application" "application_1" {
 
 ## Argument Reference
 
-* `domain` - (Required) The Domain Name.
+* `customer` - (Required) The Customer Name.
 * `name` - (Required) The Application Name.
 * `comment` - (Required) The Application Comment.
 * `owner` - (Required) The Application Owner.
@@ -71,7 +71,6 @@ resource "tos_application" "application_1" {
   }
 }
 ```
-
 
 ## Import
 

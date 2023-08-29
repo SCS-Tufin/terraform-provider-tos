@@ -8,15 +8,15 @@ The `tos_application_connections` Data Source lists Application Connections from
 data "tos_application_connections" "application_connections" {
   name = "Application Connection 1"
 
-  domain = var.domain
-  app    = var.app
+  customer = var.customer
+  app      = var.app
 }
 ```
 
 ## Argument Reference
 
 * `name` - (Required) Name (Wildcard) of the Application Connections to be listed.
-* `domain` - (Required) The Domain Name.
+* `customer` - (Required) The Customer Name.
 * `app` - (Required) The Application Name.
 
 ## Attribute Reference
@@ -54,9 +54,9 @@ application_connections = [
         name = "MARS_1"
       },
     ]
-    id           = 2870
-    name         = "Application Connection 1"
-    services     = [
+    id       = 2870
+    name     = "Application Connection 1"
+    services = [
       {
         id   = 83
         name = "http"
@@ -66,7 +66,7 @@ application_connections = [
         name = "https"
       },
     ]
-    sources      = [
+    sources = [
       {
         id   = 28612
         name = "MARS_1"

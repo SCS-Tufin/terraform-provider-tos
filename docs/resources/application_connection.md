@@ -8,7 +8,7 @@ The `tos_application_connection` Resource manages Application Connections in Tuf
 resource "tos_application_connection" "application_connection1" {
   count = length(data.tos_networkobjects.sources.networkobjects) > 0 && length(data.tos_networkobjects.sources.networkobjects) > 0 && length(data.tos_services.services.services) > 0  ? 1 : 0
 
-  name        = "Application Connection 1"
+  name       = "Application Connection 1"
   source_ids = [
     data.tos_networkobjects.sources.networkobjects[0].id,
   ]
@@ -23,23 +23,23 @@ resource "tos_application_connection" "application_connection1" {
     data.tos_services.services2.services[0].id
   ]
 
-  comment = "Application Connection 1 .."
+  comment       = "Application Connection 1 .."
   create_ticket = true
 
-  domain = var.domain
-  app    = var.app
+  customer = var.customer
+  app      = var.app
 
   tags = merge(
     var.default_tags,
     {
       application_connection_SA = format("%s", "Application Connection 1")
-    }) 
+    })
 }
 ```
 
 ## Argument Reference
 
-* `domain` - (Required) The Domain Name.
+* `customer` - (Required) The Customer Name.
 * `app` - (Required) The Application Name.
 * `name` - (Required) The Application Connection Name.
 * `comment` - (Required) The Application Connection Comment.
@@ -58,9 +58,9 @@ In addition to all arguments above, the following attributes are exported:
 
 ```terraform
 resource "tos_application_connection" "application_connection1" {
-  id     = "1707"
-  domain = "scs0"
-  app    = "Cloud"
+  id       = "1707"
+  customer = "scs0"
+  app      = "Cloud"
 
   name    = "Application Connection 1"
   comment = "Application Connection 1 .."
@@ -87,13 +87,12 @@ resource "tos_application_connection" "application_connection1" {
 }
 ```
 
-
 ## Import
 
-The `tos_application_connection` Resources are imported using the identifier `id,domain,app`.
+The `tos_application_connection` Resources are imported using the identifier `id,customer,app`.
 
 ### Example
 
 ```terraform
-terraform import module.networkobjects.tos_application_connection.application_connection_1 19147,scs0,Cloud
+terraform import module.networkobjects.tos_application_connection.application_connection_1 19147, scs0, Cloud
 ```

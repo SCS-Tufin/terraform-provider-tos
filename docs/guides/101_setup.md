@@ -13,7 +13,7 @@ terraform {
   required_providers {
     tos = {
       source  = "SCS-Tufin/tos"
-      version = "~> 1.0.0"
+      version = "~> 1.1.0"
     }
   }
 }
@@ -31,7 +31,7 @@ terraform {
   required_providers {
     tos = {
       source  = "SCS-Tufin/tos"
-      version = "~> 1.0.0"
+      version = "~> 1.1.0"
     }
   }
 }

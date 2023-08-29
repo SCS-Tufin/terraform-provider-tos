@@ -11,9 +11,6 @@ data "tos_application_packs" "application_packs_by_name" {
     "gshs"
   ]
   name = "App"
-
-  domain = var.domain
-  app    = var.app
 }
 ```
 
@@ -21,8 +18,6 @@ data "tos_application_packs" "application_packs_by_name" {
 
 * `customers` - (Required) The List of Customers to list Application Packs from.
 * `name` - (Required) The Name (Wildcard) of Application Packs to be listed.
-* `domain` - (Required) The Domain Name.
-* `app` - (Required) The Application Name.
 
 ## Attribute Reference
 
@@ -40,11 +35,11 @@ List of matching Application Packs from Tufin SC each containing:
 ```terraform
 application_packs = [
   {
-    id        = 367
-    comment   = "Tag Comment .."
-    name      = "AppPack gshs IS-Service-Incoming"
-    customer  = "gshs"
-    tags      = [
+    id       = 367
+    comment  = "Tag Comment .."
+    name     = "AppPack gshs IS-Service-Incoming"
+    customer = "gshs"
+    tags     = [
       "default",
       "Internet-IP-1",
       "Internet-IP-2",

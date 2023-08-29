@@ -6,14 +6,14 @@ The `tos_application_interfaces` Data Source lists Application Interfaces from T
 
 ```terraform
 data "tos_application_interfaces" "application_interfaces" {
-  domain = var.domain
-  app    = var.app
+  customer = var.customer
+  app      = var.app
 }
 ```
 
 ## Argument Reference
 
-* `domain` - (Required) The Domain Name.
+* `customer` - (Required) The Customer Name.
 * `app` - (Required) The Application Name.
 
 ## Attribute Reference
@@ -54,9 +54,9 @@ application_interfaces = [
             type    = "group"
           },
         ]
-        id           = 1502
-        name         = "Cloud-Tufin-Interfaces"
-        services     = [
+        id       = 1502
+        name     = "Cloud-Tufin-Interfaces"
+        services = [
           {
             comment  = ""
             global   = false
@@ -91,11 +91,11 @@ application_interfaces = [
             type     = ""
           },
         ]
-        sources      = []
+        sources = []
       },
     ]
-    name                  = "Cloud-Tufin-Interfaces"
-    published             = false
+    name      = "Cloud-Tufin-Interfaces"
+    published = false
   },
   {
     application_id        = 538
@@ -131,7 +131,7 @@ application_interfaces = [
             type     = ""
           },
         ]
-        sources      = [
+        sources = [
           {
             comment = ""
             id      = 19148
@@ -150,9 +150,9 @@ application_interfaces = [
             type    = "group"
           },
         ]
-        id           = 2769
-        name         = "app_interface_connection_ric"
-        services     = [
+        id       = 2769
+        name     = "app_interface_connection_ric"
+        services = [
           {
             comment  = ""
             global   = false
@@ -165,11 +165,11 @@ application_interfaces = [
             type     = ""
           },
         ]
-        sources      = []
+        sources = []
       },
     ]
-    name                  = "app_interface_riccardo"
-    published             = false
+    name      = "app_interface_riccardo"
+    published = false
   },
 ]
 ```

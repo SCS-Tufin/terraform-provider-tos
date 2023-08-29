@@ -12,8 +12,8 @@ resource "tos_application_interface" "application_interface1" {
   application_pack_id = length(data.tos_application_packs.packs_for_interface.application_packs) > 0 ?data.tos_application_packs.packs_for_interface.application_packs[0].id : 0
   tag                 = length(data.tos_application_packs.packs_for_interface.application_packs[0].tags) > 0 ? data.tos_application_packs.packs_for_interface.application_packs[0].tags[0] : ""
 
-  domain = var.domain
-  app    = var.app
+  customer = var.customer
+  app      = var.app
 
   interface_connection {
     name    = "app_interface_connection_1"
@@ -52,7 +52,7 @@ resource "tos_application_interface" "application_interface1" {
 
 ## Argument Reference
 
-* `domain` - (Required) The Domain Name.
+* `customer` - (Required) The Customer Name.
 * `app` - (Required) The Application Name.
 * `name` - (Required) The Application Interface Name.
 * `comment` - (Required) The Application Interface Comment.
@@ -84,7 +84,7 @@ resource "tos_application_interface" "application_interface1" {
   app                 = "Cloud"
   application_pack_id = 1438
   comment             = "app interface 1 .."
-  domain              = "scs0"
+  customer            = "scs0"
   id                  = "242"
   name                = "app_interface_1"
   tag                 = "app_interface_1"

@@ -9,7 +9,7 @@ only valid in Mode 'tba'.
 data "tos_networksuffixes" "networksuffixes_by_network" {
   network = "1.2.3.4/31"
 
-  domain = var.domain
+  customer = var.customer
 }
 
 ```
@@ -17,7 +17,7 @@ data "tos_networksuffixes" "networksuffixes_by_network" {
 ## Argument Reference
 
 * `network` - (Required) The Network to get the Network Suffix for.
-* `domain` - (Required) The Domain Name.
+* `customer` - (Required) The Customer Name.
 
 ## Attribute Reference
 
@@ -35,19 +35,19 @@ List of matching Network Suffixes from Tufin Backend API:
 
 ```terraform
 data "tos_networksuffixes" "networksuffixes_by_network" {
-  domain          = "scs0"
+  customer        = "scs0"
   id              = "networksuffixes"
   network         = "1.2.3.4/31"
   networksuffixes = [
     {
-      id                = 4
-      network           = "1.2.3.0/16"
-      suffix            = "uco"
+      comment           = "test"
       connected_domains = [
         "htc0",
-        "htc1 ",
+        "htc1",
       ]
-      comment = "test"
+      id                = 1
+      network           = "1.2.3.0/16"
+      suffix            = "uco"
     },
   ]
 }
