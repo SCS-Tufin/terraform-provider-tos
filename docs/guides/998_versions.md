@@ -5,7 +5,7 @@ subcategory: "Versions"
 
 # Current Versions
 
-## v1.1.0
+## v1.2.2
 
 Coming soon!
 
