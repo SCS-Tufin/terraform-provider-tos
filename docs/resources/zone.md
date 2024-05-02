@@ -52,7 +52,7 @@ resource "tos_zone" "zone_1" {
   domain     = "moon"
   comment    = "Test Zone TF 1 .. Created by Terraform Provider TOS"
   name       = "TestZoneTF1tba"
-  parentZone = 'ParentZone'
+  parentZone = "ParentZone"
   tags       = {
     "description" = "Terraform Provider TOS Showcase Zones+Zone Entries"
     "env"         = "Tufin@me"

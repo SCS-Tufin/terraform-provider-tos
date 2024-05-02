@@ -45,6 +45,6 @@ info = {
   "TOS SC Url"  = "https://1.2.3.4"
   "TOS ST Url"  = "https://1.2.3.4"
   "Title"       = "Terraform Provider TOS (Tufin Orchestration Suite)"
-  "Version"     = "v1.2.1"
+  "Version"     = "v1.3.0"
 }
 ```
