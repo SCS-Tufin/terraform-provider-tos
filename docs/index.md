@@ -1,4 +1,4 @@
-# Terraform Provider TOS (Tufin Orchestration Suite) test
+# Terraform Provider TOS (Tufin Orchestration Suite)
 
 Terraform Provider for Tufin Orchestration Suite (TOS) with Resource Management in Secure App (SA), Secure Change (SC)
 and Secure Track (ST).
@@ -59,3 +59,5 @@ Visit [Tufin](https://tufin.com) for more information on TOS.
 
 [tos_zone_entry](resources/zone_entry.md)
 
+### Tools
+[USPE xml to tf Mapper](guides/200_uspe_xml_to_tf_mapper.md)
