@@ -12,6 +12,8 @@ resource "tos_uspe" "uspe1" {
   requested_by    = "requester"
   approved_by     = "approver"
   expiration_date = "2024-12-31"
+  description = "USPE Description .."
+  comment = "Traffic Comment .."
 
   source_networks = []
   source_zone {
@@ -53,6 +55,8 @@ resource "tos_uspe" "uspe1" {
 * `requested_by` - (Optional) The Requester.
 * `approved_by` - (Optional) The Approver.
 * `expiration_date` - (Optional) The Expiration Date.
+* `description` - (Optional) The USPE Description.
+* `comment` - (Optional) The Traffic Comment.
 * `source_networks` - (Required) The Source Networks.
 * `source_zone` - (Required) The Source Zone Block(s).
 * `service` - (Optional) The Service Block(s).
@@ -80,7 +84,9 @@ resource "tos_uspe" "uspe1" {
   requested_by    = "requester"
   approved_by     = "approver"
   expiration_date = "2024-12-31"
-
+  description     = "USPE Description .."
+  comment         = "Traffic Comment .."
+  
   source_zone {
     zone_name = "zone1"
     domain    = "moon"
