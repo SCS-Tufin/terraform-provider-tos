@@ -53,6 +53,8 @@ Visit [Tufin](https://tufin.com) for more information on TOS.
 
 [tos_subnet](resources/subnet.md)
 
+[tos_service](resources/service.md)
+
 [tos_uspe](resources/uspe.md)
 
 [tos_zone](resources/zone.md)

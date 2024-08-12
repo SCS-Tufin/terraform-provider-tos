@@ -17,7 +17,7 @@ data "tos_application_packs" "application_packs_by_name" {
 ## Argument Reference
 
 * `customers` - (Required) The List of Customers to list Application Packs from.
-* `name` - (Required) The Name (Wildcard) of Application Packs to be listed.
+* `name` - (Required) The Name (regex) of Application Packs to be listed.
 
 ## Attribute Reference
 
