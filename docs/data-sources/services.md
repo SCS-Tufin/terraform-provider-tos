@@ -16,11 +16,12 @@ data "tos_services" "services_by_name" {
 
 ## Argument Reference
 
-* `name` - Name (Wildcard) of the Global/Local Services to be listed.
-* `min_port` - Min Port of the Global/Local Services to be listed
-* `max_port` - Max Port of the Global/Local Services to be listed
-* `service_type` - Service type of the Global/Local Services to be listed. Eg. tcp, udp, icmp, ip
-* `app_id` - Specify application id to search in Local services
+* `name` - Name (Wildcard) of the Services to be listed.
+* `min_port` - Min Port of the Services to be listed
+* `max_port` - Max Port of the Services to be listed
+* `service_type` - Service type of the Services to be listed (eg. tcp, udp, icmp)
+* `app_id` - Specify application id to search in Application (Local) Services
+* `globals_only` - Specify to search for Global or Application (Local) Services
 
 Note: All arguments are optional. 
 
