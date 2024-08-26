@@ -6,7 +6,9 @@ The `tos_service_groups` Data Source lists Global Service Groups from Tufin SA.
 
 ```terraform
 data "tos_service_groups" "service_groups_by_name" {
-  name = "ServiceGroup"
+  name         = "ServiceGroup"
+  globals_only = false
+  app_id       = 123
 }
 ```
 
@@ -22,7 +24,8 @@ List of matching Service Groups from Tufin SA:
 
 * `id` - Service Id.
 * `name` - Service Name.
-* `global` - Service Global Flag.
+* `globals_only` - Globals Only Flag.
+* `app_id` - Specify application id to search in Application (Local) Services
 * `type` - Service Type.
 * `members` - List of Service Group Members (which are Services).
 * `comment` - Service Comment.
@@ -32,10 +35,10 @@ List of matching Service Groups from Tufin SA:
 ```terraform
 service_groups = [
   {
-    id      = 1
-    name    = "ServiceGroup"
-    global  = true
-    type    = "group"
+    id     = 1
+    name   = "ServiceGroup"
+    global = false
+    type   = "group"
     members = [
       "ftp",
       "http",
@@ -47,7 +50,5 @@ service_groups = [
     comment = "comment .."
   },
 ]
-
-
 ```
 
