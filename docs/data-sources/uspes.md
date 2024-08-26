@@ -1,6 +1,6 @@
 # Data Source `tos_uspes`
 
-The `tos_uspes` Data Source lists Unified Security Policy Exceptions (USPEs) from Tufin ST.
+The `tos_uspes` Data Source lists Unified Security Policy Exceptions (USPEs) from Tufin Classic ST.
 
 ## Usage
 

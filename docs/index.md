@@ -29,6 +29,8 @@ Visit [Tufin](https://tufin.com) for more information on TOS.
 
 [tos_uspes](data-sources/uspes.md)
 
+[tos_uspes_v2](data-sources/uspes_v2.md)
+
 [tos_zones](data-sources/zones.md)
 
 [tos_zone_entries](data-sources/zone_entries.md)
@@ -56,6 +58,8 @@ Visit [Tufin](https://tufin.com) for more information on TOS.
 [tos_service](resources/service.md)
 
 [tos_uspe](resources/uspe.md)
+
+[tos_uspe_v2](resources/uspe_v2.md)
 
 [tos_zone](resources/zone.md)
 

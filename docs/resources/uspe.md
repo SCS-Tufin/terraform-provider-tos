@@ -1,48 +1,50 @@
 # Resource `tos_uspe`
 
-The `tos_uspe` Resource manages Unified Security Policy Exceptions (USPEs) from Tufin ST.
+The `tos_uspe` Resource manages Unified Security Policy Exceptions (USPEs) from Tufin Classic ST.
 
 ## Usage
 
 ```terraform
-resource "tos_uspe" "uspe1" {
-  domain          = "moon"
-  name            = "USPE_1"
+resource "tos_uspe_v2" "USPE_2" {
+  domain          = "htc1"
+  name            = "USPE_2"
   ticket_id       = "123"
-  requested_by    = "requester"
-  approved_by     = "approver"
+  requester       = "taaroch0"
+  approver        = "taaroch1"
   expiration_date = "2024-12-31"
-  description = "USPE Description .."
-  comment = "Traffic Comment .."
+  description     = "USPE_2 tos.."
 
-  source_networks = []
-  source_zone {
-    zone_id   = 123
-    zone_name = "TestZone1"
-    domain    = "mars"
-  }
+  source_networks = [
+    "1.2.3.4/32",
+    "1.2.3.0/24"
+  ]
 
-  service {
-    protocol = "tcp"
-    port     = "22"
-  }
+  services = [
+    "tcp",
+    "udp"
+  ]
 
   destination_networks = [
-    "1.2.3.4/32"
+    "1.2.3.4/32",
+    "1.2.3.0/24"
   ]
 
   security_requirement {
-    from_domain = "mars"
-    from_zone   = "zone1"
-    to_domain   = "venus"
-    to_zone     = "zone2"
-    policy_name = "default-policy"
+    from_zone   = "ctdcg_ss1"
+    to_zone     = "ctdcg_aze"
+    policy_name = "htc1-default"
+  }
+
+  security_requirement {
+    from_zone   = "ctdcg_ss2"
+    to_zone     = "ctdcg_aze"
+    policy_name = "htc1-default"
   }
 
   tags = merge(
     var.default_tags,
     {
-      uspe_ST = format("%s", "USPE_1")
+      uspe_ST = format("%s", "USPE_2 tos")
     })
 }
 ```
