@@ -1,6 +1,6 @@
 # Data Source `tos_service_groups`
 
-The `tos_service_groups` Data Source lists Global Service Groups from Tufin SA.
+The `tos_service_groups` Data Source lists Global or Application (Local) Service Groups from Tufin SA.
 
 ## Usage
 
@@ -14,7 +14,7 @@ data "tos_service_groups" "service_groups_by_name" {
 
 ## Argument Reference
 
-* `name` - Name (Wildcard) of the Global Service Groups to be listed.
+* `name` - Name (Wildcard) of the Service Groups to be listed.
 
 ## Attribute Reference
 
