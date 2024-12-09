@@ -24,7 +24,7 @@ resource "tos_application_connection" "application_connection1" {
   ]
 
   comment       = "Application Connection 1 .."
-  create_ticket = true
+  create_ticket = "new"
 
   customer = var.customer
   app      = var.app
@@ -47,6 +47,7 @@ resource "tos_application_connection" "application_connection1" {
 * `service_ids` - (Required) The Application Connection's Service Server Ids.
 * `destination_ids` - (Required) Application Connection's Destination Server Ids.
 * `tags` - (Optional) Resource Tags; see [Tags](tag.md) for details.
+* `create_ticket` - (Optional) Create ticket for the connection. Use "new" to Create a ticket for pushing changes to firewall. Use "closed" to create a Closed Ticket. Closed ticket will not affect the firewalls.
 
 ## Attribute Reference
 
@@ -64,6 +65,7 @@ resource "tos_application_connection" "application_connection1" {
 
   name    = "Application Connection 1"
   comment = "Application Connection 1 .."
+  create_ticket   = "new"
 
   source_ids = [
     1,
@@ -76,7 +78,14 @@ resource "tos_application_connection" "application_connection1" {
   destination_ids = [
     5,
   ]
-  tags = {
+  ticket_info     = [
+    {
+      create_ticket = "new"
+      id            = 6
+      subject       = "AUT-ADD-mars"
+      warnings      = []
+    },
+    tags = {
     "description"               = "Terraform Provider TOS Showcase Application Connection Objects"
     "env"                       = "Tufin@me"
     "origin"                    = "provider-tufin-tba"

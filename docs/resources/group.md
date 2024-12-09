@@ -19,6 +19,8 @@ resource "tos_group" "group_1" {
     "PLUTO_1",
   ]
 
+  create_ticket = "new"
+  
   tags = merge(
     var.default_tags,
     {
@@ -35,6 +37,9 @@ resource "tos_group" "group_1" {
 * `comment` - (Required) The Group Comment.
 * `members` - (Required) The Group Members.
 * `tags` - (Optional) Resource Tags; see [Tags](tag.md) for details.
+* `create_ticket` - (Optional) Create ticket for the connection. Use "new" to Create a ticket for pushing changes to firewall. Use "closed" to create a Closed Ticket. Closed ticket will not affect the firewalls.
+
+
 
 ## Attribute Reference
 
@@ -57,6 +62,15 @@ resource "tos_group" "group_1" {
     "MILKYWAY_1",
     "PLUTO_1",
   ]
+
+  ticket_info     = [
+    {
+      create_ticket = "new"
+      id            = 6
+      subject       = "AUT-ADD-"
+      warnings      = []
+    },
+  
   tags = {
     "description"       = "Terraform Provider TOS Showcase Network Objects"
     "env"               = "Tufin@me"

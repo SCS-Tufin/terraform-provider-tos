@@ -23,6 +23,8 @@ resource "tos_connection_to_application_pack" "connection_to_application_pack1" 
     tag = "Internet-IP-1"
   }
 
+  create_ticket = "new"
+  
   tags = merge(
     var.default_tags,
     {
@@ -42,6 +44,7 @@ resource "tos_connection_to_application_pack" "connection_to_application_pack1" 
 * `application_pack` - (Required) The Application Pack Block.
 * `network_objects_tag` - (Required) The Network Objects Tag Block(s).
 * `tags` - (Optional) Resource Tags; see [Tags](tag.md) for details.
+* `create_ticket` - (Optional) Create ticket for the connection. Use "new" to Create a ticket for pushing changes to firewall. Use "closed" to create a Closed Ticket. Closed ticket will not affect the firewalls.
 
 ## Attribute Reference
 
@@ -67,6 +70,14 @@ resource "tos_connection_to_application_pack" "connection_to_application_pack1" 
     "version"                           = "1.0.0"
   }
 
+  ticket_info     = [
+    {
+      create_ticket = "new"
+      id            = 6
+      subject       = "AUT-ADD-"
+      warnings      = []
+    },
+    
   application_pack {
     customer = "sun"
     id       = 2
