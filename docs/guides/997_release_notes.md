@@ -5,7 +5,7 @@ subcategory: "Versions"
 
 # Release Notes
 ### TOS Terraform Provider v.1.5.2
-October 28th, 2025
+May 4th, 2026
 
 __Fixed__
 - USPE v2 schema issues has been fixed.
